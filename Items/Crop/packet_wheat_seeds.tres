@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="items_data" format=3 uid="uid://bpxh61iv8erw4"]
+
+[ext_resource type="Texture2D" uid="uid://ccrorddsu8tpi" path="res://Farm RPG FREE 16x16 - Tiny Asset Pack (2)/cultivo/culitvos finales .png" id="1_20ikb"]
+[ext_resource type="Script" uid="uid://cgxdmu3huwcct" path="res://Resource/items_data.gd" id="1_ny2t4"]
+[ext_resource type="Resource" uid="uid://r600bjammgb4" path="res://Plantas/cultivos/trigo.tres" id="2_0jmap"]
+[ext_resource type="Script" uid="uid://bv1drihi25fec" path="res://Items/Crop/seed_behavior.gd" id="2_6cae7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_20ikb"]
+atlas = ExtResource("1_20ikb")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="Resource" id="Resource_20ikb"]
+script = ExtResource("2_6cae7")
+planta = ExtResource("2_0jmap")
+metadata/_custom_type_script = "uid://bv1drihi25fec"
+
+[resource]
+script = ExtResource("1_ny2t4")
+id = "semillas de trigo"
+nombre = "semillas de trigo"
+descripcion = "aaa"
+icono = SubResource("AtlasTexture_20ikb")
+stackable = true
+item_behavior = SubResource("Resource_20ikb")
+metadata/_custom_type_script = "uid://cgxdmu3huwcct"

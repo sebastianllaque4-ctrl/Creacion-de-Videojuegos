@@ -1,0 +1,536 @@
+[gd_scene format=3 uid="uid://cw3vuwhxu2a27"]
+
+[ext_resource type="PackedScene" uid="uid://bw43q0dmr6ot7" path="res://Intefas/inv_slot.tscn" id="1_fyqef"]
+[ext_resource type="Script" uid="uid://7vw7sb3jo75j" path="res://Intefas/ui_modificadores.gd" id="1_ln0t1"]
+[ext_resource type="Script" uid="uid://ckk30w5603vn7" path="res://Intefas/ui_inventory.gd" id="2_d6fq5"]
+[ext_resource type="Texture2D" uid="uid://dedvk6wvu2oea" path="res://Farm RPG FREE 16x16 - Tiny Asset Pack (2)/ui/interfas2.png" id="3_ln0t1"]
+[ext_resource type="Texture2D" uid="uid://cgk2qg722ucok" path="res://Farm RPG FREE 16x16 - Tiny Asset Pack (2)/ui/interfas.png" id="4_ysj20"]
+[ext_resource type="PackedScene" uid="uid://df21sj5kr3dyr" path="res://dragged_items.tscn" id="6_777hh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jb7d4"]
+atlas = ExtResource("3_ln0t1")
+region = Rect2(18, 53, 127, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ef82"]
+atlas = ExtResource("4_ysj20")
+region = Rect2(400, 15, 192, 67)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d6fq5"]
+atlas = ExtResource("4_ysj20")
+region = Rect2(400, 94, 192, 22)
+
+[node name="ui" type="CanvasLayer" unique_id=2112178242]
+
+[node name="Dinero" type="Control" parent="." unique_id=479262892]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ln0t1")
+
+[node name="TextureRect" type="TextureRect" parent="Dinero" unique_id=222281671]
+layout_mode = 0
+offset_left = 876.0
+offset_top = 136.0
+offset_right = 1141.2
+offset_bottom = 188.0
+texture = SubResource("AtlasTexture_jb7d4")
+
+[node name="Label" type="Label" parent="Dinero" unique_id=927965015]
+layout_mode = 0
+offset_left = 904.0
+offset_top = 78.0
+offset_right = 1132.0
+offset_bottom = 122.0
+
+[node name="Label2" type="Label" parent="Dinero" unique_id=1350019383]
+layout_mode = 0
+offset_left = 909.0
+offset_top = 22.0
+offset_right = 1124.0
+offset_bottom = 57.0
+
+[node name="inventory_ui" type="Control" parent="." unique_id=199320529]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("2_d6fq5")
+
+[node name="bar" type="TextureRect" parent="inventory_ui" unique_id=1197067008]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.748
+anchor_right = 0.5
+anchor_bottom = 0.748
+offset_left = -339.5821
+offset_top = -236.70401
+offset_right = 339.5821
+offset_bottom = 0.29599
+grow_horizontal = 2
+grow_vertical = 0
+texture = SubResource("AtlasTexture_8ef82")
+
+[node name="InvSlot0" parent="inventory_ui/bar" unique_id=253581656 instance=ExtResource("1_fyqef")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.016
+anchor_top = 0.70000005
+anchor_right = 0.016
+anchor_bottom = 0.70000005
+offset_left = -0.2845354
+offset_top = 0.099990845
+offset_right = 63.715466
+offset_bottom = 64.09999
+
+[node name="InvSlot1" parent="inventory_ui/bar" unique_id=382779261 instance=ExtResource("1_fyqef")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.125
+anchor_top = 0.70000005
+anchor_right = 0.125
+anchor_bottom = 0.70000005
+offset_left = -0.3134308
+offset_top = 0.099990845
+offset_right = 63.68657
+offset_bottom = 64.09999
+
+[node name="InvSlot2" parent="inventory_ui/bar" unique_id=1048657036 instance=ExtResource("1_fyqef")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.23300001
+anchor_top = 0.70000005
+anchor_right = 0.23300001
+anchor_bottom = 0.70000005
+offset_left = 0.33683777
+offset_top = 0.099990845
+offset_right = 64.33684
+offset_bottom = 64.09999
+
+[node name="InvSlot3" parent="inventory_ui/bar" unique_id=887123127 instance=ExtResource("1_fyqef")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.342
+anchor_top = 0.70000005
+anchor_right = 0.342
+anchor_bottom = 0.70000005
+offset_left = 0.30793762
+offset_top = 0.099990845
+offset_right = 64.30794
+offset_bottom = 64.09999
+
+[node name="InvSlot4" parent="inventory_ui/bar" unique_id=464043156 instance=ExtResource("1_fyqef")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.45100003
+anchor_top = 0.70000005
+anchor_right = 0.45100003
+anchor_bottom = 0.70000005
+offset_left = 0.27902222
+offset_top = 0.099990845
+offset_right = 64.27902
+offset_bottom = 64.09999
+
+[node name="InvSlot5" parent="inventory_ui/bar" unique_id=1428908446 instance=ExtResource("1_fyqef")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.56200004
+anchor_top = 0.70000005
+anchor_right = 0.56200004
+anchor_bottom = 0.70000005
+offset_left = -0.10821533
+offset_top = 0.099990845
+offset_right = 63.891785
+offset_bottom = 64.09999
+
+[node name="InvSlot6" parent="inventory_ui/bar" unique_id=910032983 instance=ExtResource("1_fyqef")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.671
+anchor_top = 0.70000005
+anchor_right = 0.671
+anchor_bottom = 0.70000005
+offset_left = -0.13708496
+offset_top = 0.099990845
+offset_right = 63.862915
+offset_bottom = 64.09999
+
+[node name="InvSlot7" parent="inventory_ui/bar" unique_id=360981760 instance=ExtResource("1_fyqef")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.781
+anchor_top = 0.70000005
+anchor_right = 0.781
+anchor_bottom = 0.70000005
+offset_left = 0.15484619
+offset_top = 0.099990845
+offset_right = 64.15485
+offset_bottom = 64.09999
+
+[node name="InvSlot8" parent="inventory_ui/bar" unique_id=1972063197 instance=ExtResource("1_fyqef")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.89000005
+anchor_top = 0.70000005
+anchor_right = 0.89000005
+anchor_bottom = 0.70000005
+offset_left = 0.12591553
+offset_top = 0.099990845
+offset_right = 64.125916
+offset_bottom = 64.09999
+
+[node name="InvSlot9" parent="inventory_ui/bar" unique_id=1501136448 instance=ExtResource("1_fyqef")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.014
+anchor_top = 0.342
+anchor_right = 0.014
+anchor_bottom = 0.342
+offset_left = 0.07379341
+offset_top = -0.054000854
+offset_right = 64.07379
+offset_bottom = 63.946
+
+[node name="InvSlot10" parent="inventory_ui/bar" unique_id=1215134224 instance=ExtResource("1_fyqef")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.125
+anchor_top = 0.342
+anchor_right = 0.125
+anchor_bottom = 0.342
+offset_left = -0.3134308
+offset_top = -0.054000854
+offset_right = 63.68657
+offset_bottom = 63.946
+
+[node name="InvSlot11" parent="inventory_ui/bar" unique_id=1029983188 instance=ExtResource("1_fyqef")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.23300001
+anchor_top = 0.342
+anchor_right = 0.23300001
+anchor_bottom = 0.342
+offset_left = 0.33683777
+offset_top = -0.054000854
+offset_right = 64.33684
+offset_bottom = 63.946
+
+[node name="InvSlot12" parent="inventory_ui/bar" unique_id=1821663098 instance=ExtResource("1_fyqef")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.342
+anchor_top = 0.342
+anchor_right = 0.342
+anchor_bottom = 0.342
+offset_left = 0.30793762
+offset_top = -0.054000854
+offset_right = 64.30794
+offset_bottom = 63.946
+
+[node name="InvSlot13" parent="inventory_ui/bar" unique_id=1972966244 instance=ExtResource("1_fyqef")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.45100003
+anchor_top = 0.342
+anchor_right = 0.45100003
+anchor_bottom = 0.342
+offset_left = 0.27902222
+offset_top = -0.054000854
+offset_right = 64.27902
+offset_bottom = 63.946
+
+[node name="InvSlot14" parent="inventory_ui/bar" unique_id=661587838 instance=ExtResource("1_fyqef")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.56200004
+anchor_top = 0.342
+anchor_right = 0.56200004
+anchor_bottom = 0.342
+offset_left = -0.10821533
+offset_top = -0.054000854
+offset_right = 63.891785
+offset_bottom = 63.946
+
+[node name="InvSlot15" parent="inventory_ui/bar" unique_id=1476475056 instance=ExtResource("1_fyqef")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.671
+anchor_top = 0.342
+anchor_right = 0.671
+anchor_bottom = 0.342
+offset_left = -0.13708496
+offset_top = -0.054000854
+offset_right = 63.862915
+offset_bottom = 63.946
+
+[node name="InvSlot16" parent="inventory_ui/bar" unique_id=1030211465 instance=ExtResource("1_fyqef")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.78000003
+anchor_top = 0.342
+anchor_right = 0.78000003
+anchor_bottom = 0.342
+offset_left = -0.16601563
+offset_top = -0.054000854
+offset_right = 63.833984
+offset_bottom = 63.946
+
+[node name="InvSlot17" parent="inventory_ui/bar" unique_id=1408476126 instance=ExtResource("1_fyqef")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.88900006
+anchor_top = 0.342
+anchor_right = 0.88900006
+anchor_bottom = 0.342
+offset_left = -0.19488525
+offset_top = -0.054000854
+offset_right = 63.805115
+offset_bottom = 63.946
+
+[node name="InvSlot18" parent="inventory_ui/bar" unique_id=2099437303 instance=ExtResource("1_fyqef")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.014
+anchor_top = 0.030000001
+anchor_right = 0.014
+anchor_bottom = 0.030000001
+offset_left = 0.07379341
+offset_top = -0.11000013
+offset_right = 64.07379
+offset_bottom = 63.89
+
+[node name="InvSlot19" parent="inventory_ui/bar" unique_id=1442098796 instance=ExtResource("1_fyqef")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.125
+anchor_top = 0.030000001
+anchor_right = 0.125
+anchor_bottom = 0.030000001
+offset_left = -0.3134308
+offset_top = -0.11000013
+offset_right = 63.68657
+offset_bottom = 63.89
+
+[node name="InvSlot20" parent="inventory_ui/bar" unique_id=928342653 instance=ExtResource("1_fyqef")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.23300001
+anchor_top = 0.030000001
+anchor_right = 0.23300001
+anchor_bottom = 0.030000001
+offset_left = 0.33683777
+offset_top = -0.11000013
+offset_right = 64.33684
+offset_bottom = 63.89
+
+[node name="InvSlot21" parent="inventory_ui/bar" unique_id=587093935 instance=ExtResource("1_fyqef")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.342
+anchor_top = 0.030000001
+anchor_right = 0.342
+anchor_bottom = 0.030000001
+offset_left = 0.30793762
+offset_top = -0.11000013
+offset_right = 64.30794
+offset_bottom = 63.89
+
+[node name="InvSlot22" parent="inventory_ui/bar" unique_id=852665068 instance=ExtResource("1_fyqef")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.45100003
+anchor_top = 0.030000001
+anchor_right = 0.45100003
+anchor_bottom = 0.030000001
+offset_left = 0.27902222
+offset_top = -0.11000013
+offset_right = 64.27902
+offset_bottom = 63.89
+
+[node name="InvSlot23" parent="inventory_ui/bar" unique_id=1440591404 instance=ExtResource("1_fyqef")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.56
+anchor_top = 0.030000001
+anchor_right = 0.56
+anchor_bottom = 0.030000001
+offset_left = 0.2501526
+offset_top = -0.11000013
+offset_right = 64.25015
+offset_bottom = 63.89
+
+[node name="InvSlot24" parent="inventory_ui/bar" unique_id=730537610 instance=ExtResource("1_fyqef")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.671
+anchor_top = 0.030000001
+anchor_right = 0.671
+anchor_bottom = 0.030000001
+offset_left = -0.13708496
+offset_top = -0.11000013
+offset_right = 63.862915
+offset_bottom = 63.89
+
+[node name="InvSlot25" parent="inventory_ui/bar" unique_id=1936893839 instance=ExtResource("1_fyqef")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.781
+anchor_top = 0.030000001
+anchor_right = 0.781
+anchor_bottom = 0.030000001
+offset_left = 0.15484619
+offset_top = -0.11000013
+offset_right = 64.15485
+offset_bottom = 63.89
+
+[node name="InvSlot26" parent="inventory_ui/bar" unique_id=260668573 instance=ExtResource("1_fyqef")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.89000005
+anchor_top = 0.030000001
+anchor_right = 0.89000005
+anchor_bottom = 0.030000001
+offset_left = 0.12591553
+offset_top = -0.11000013
+offset_right = 64.125916
+offset_bottom = 63.89
+
+[node name="dragged_items" parent="inventory_ui" unique_id=403188099 instance=ExtResource("6_777hh")]
+visible = false
+layout_mode = 0
+offset_left = 5.0
+offset_top = -2.0
+offset_right = 69.0
+offset_bottom = 62.0
+
+[node name="hub_bar" type="TextureRect" parent="inventory_ui" unique_id=228978756]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.961
+anchor_right = 0.5
+anchor_bottom = 0.961
+offset_left = -340.36362
+offset_top = -77.72803
+offset_right = 340.36365
+offset_bottom = 0.27197266
+grow_horizontal = 2
+grow_vertical = 0
+texture = SubResource("AtlasTexture_d6fq5")
+stretch_mode = 4
+
+[node name="InvSlot0" parent="inventory_ui/hub_bar" unique_id=1409043645 instance=ExtResource("1_fyqef")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.017
+anchor_top = 0.09
+anchor_right = 0.017
+anchor_bottom = 0.09
+offset_left = -0.20874786
+offset_top = -0.020000458
+offset_right = 63.791252
+offset_bottom = 63.98
+
+[node name="InvSlot1" parent="inventory_ui/hub_bar" unique_id=1052368912 instance=ExtResource("1_fyqef")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.125
+anchor_top = 0.09
+anchor_right = 0.125
+anchor_bottom = 0.09
+offset_left = 0.27270508
+offset_top = -0.020000458
+offset_right = 64.272705
+offset_bottom = 63.98
+
+[node name="InvSlot2" parent="inventory_ui/hub_bar" unique_id=2131925334 instance=ExtResource("1_fyqef")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.23600002
+anchor_top = 0.09
+anchor_right = 0.23600002
+anchor_bottom = 0.09
+offset_left = -0.28804016
+offset_top = -0.020000458
+offset_right = 63.71196
+offset_bottom = 63.98
+
+[node name="InvSlot3" parent="inventory_ui/hub_bar" unique_id=1163423287 instance=ExtResource("1_fyqef")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.344
+anchor_top = 0.09
+anchor_right = 0.344
+anchor_bottom = 0.09
+offset_left = 0.1933899
+offset_top = -0.020000458
+offset_right = 64.19339
+offset_bottom = 63.98
+
+[node name="InvSlot4" parent="inventory_ui/hub_bar" unique_id=708401343 instance=ExtResource("1_fyqef")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.453
+anchor_top = 0.09
+anchor_right = 0.453
+anchor_bottom = 0.09
+offset_left = -0.00592041
+offset_top = -0.020000458
+offset_right = 63.99408
+offset_bottom = 63.98
+
+[node name="InvSlot5" parent="inventory_ui/hub_bar" unique_id=1602514103 instance=ExtResource("1_fyqef")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.56200004
+anchor_top = 0.09
+anchor_right = 0.56200004
+anchor_bottom = 0.09
+offset_left = -0.20526123
+offset_top = -0.020000458
+offset_right = 63.79474
+offset_bottom = 63.98
+
+[node name="InvSlot6" parent="inventory_ui/hub_bar" unique_id=1064296412 instance=ExtResource("1_fyqef")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.67
+anchor_top = 0.09
+anchor_right = 0.67
+anchor_bottom = 0.09
+offset_left = 0.27618408
+offset_top = -0.020000458
+offset_right = 64.276215
+offset_bottom = 63.98
+
+[node name="InvSlot7" parent="inventory_ui/hub_bar" unique_id=1584293600 instance=ExtResource("1_fyqef")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.77900004
+anchor_top = 0.09
+anchor_right = 0.77900004
+anchor_bottom = 0.09
+offset_left = 0.0769043
+offset_top = -0.020000458
+offset_right = 64.076904
+offset_bottom = 63.98
+
+[node name="InvSlot8" parent="inventory_ui/hub_bar" unique_id=1659888324 instance=ExtResource("1_fyqef")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.89100003
+anchor_top = 0.09
+anchor_right = 0.89100003
+anchor_bottom = 0.09
+offset_left = -0.16436768
+offset_top = -0.020000458
+offset_right = 63.835632
+offset_bottom = 63.98

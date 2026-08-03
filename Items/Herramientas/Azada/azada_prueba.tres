@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="items_data" format=3 uid="uid://c6gvek1buugra"]
+
+[ext_resource type="Texture2D" uid="uid://ccrorddsu8tpi" path="res://Farm RPG FREE 16x16 - Tiny Asset Pack (2)/cultivo/culitvos finales .png" id="1_765tl"]
+[ext_resource type="Script" uid="uid://cgxdmu3huwcct" path="res://Resource/items_data.gd" id="1_mjvkv"]
+[ext_resource type="Script" uid="uid://ctb84gs6os3rp" path="res://Items/Herramientas/Azada/hoe_behavior.gd" id="2_mby3d"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_765tl"]
+atlas = ExtResource("1_765tl")
+region = Rect2(320, 0, 32, 32)
+
+[sub_resource type="Resource" id="Resource_37jgm"]
+script = ExtResource("2_mby3d")
+metadata/_custom_type_script = "uid://ctb84gs6os3rp"
+
+[resource]
+script = ExtResource("1_mjvkv")
+id = "azada"
+nombre = "azadaPrueba"
+descripcion = "azada"
+icono = SubResource("AtlasTexture_765tl")
+stackable = true
+max_stack = 1
+item_behavior = SubResource("Resource_37jgm")
+metadata/_custom_type_script = "uid://cgxdmu3huwcct"

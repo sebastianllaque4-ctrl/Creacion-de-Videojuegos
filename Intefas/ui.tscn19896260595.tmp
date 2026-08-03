@@ -1,0 +1,121 @@
+[gd_scene format=3 uid="uid://cw3vuwhxu2a27"]
+
+[ext_resource type="PackedScene" uid="uid://bw43q0dmr6ot7" path="res://Intefas/inv_slot.tscn" id="1_fyqef"]
+[ext_resource type="Texture2D" uid="uid://cm1ssngloa7ma" path="res://Farm RPG FREE 16x16 - Tiny Asset Pack (2)/ui/skin.png" id="1_m6e0p"]
+[ext_resource type="Script" uid="uid://ckk30w5603vn7" path="res://Intefas/ui_inventory.gd" id="2_d6fq5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jb7d4"]
+atlas = ExtResource("1_m6e0p")
+region = Rect2(18, 53, 127, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ef82"]
+atlas = ExtResource("1_m6e0p")
+region = Rect2(10, 8, 245, 28)
+
+[node name="ui" type="CanvasLayer" unique_id=2112178242]
+
+[node name="Dinero" type="Control" parent="." unique_id=479262892]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Dinero" unique_id=222281671]
+layout_mode = 0
+offset_left = 876.0
+offset_top = 136.0
+offset_right = 1141.2
+offset_bottom = 188.0
+texture = SubResource("AtlasTexture_jb7d4")
+
+[node name="Control" type="Control" parent="." unique_id=199320529]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("2_d6fq5")
+
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=228978756]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.94400007
+anchor_right = 0.5
+anchor_bottom = 0.94400007
+offset_left = -332.0
+offset_top = -59.712036
+offset_right = 333.0
+offset_bottom = 16.287964
+grow_horizontal = 2
+grow_vertical = 0
+texture = SubResource("AtlasTexture_8ef82")
+stretch_mode = 4
+
+[node name="InvSlot" parent="Control/TextureRect" unique_id=253581656 instance=ExtResource("1_fyqef")]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 68.0
+offset_bottom = 68.0
+
+[node name="InvSlot2" parent="Control/TextureRect" unique_id=319667652 instance=ExtResource("1_fyqef")]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 8.0
+offset_right = 140.0
+offset_bottom = 68.0
+
+[node name="InvSlot3" parent="Control/TextureRect" unique_id=446234396 instance=ExtResource("1_fyqef")]
+layout_mode = 0
+offset_left = 152.0
+offset_top = 8.0
+offset_right = 212.0
+offset_bottom = 68.0
+
+[node name="InvSlot4" parent="Control/TextureRect" unique_id=1719753026 instance=ExtResource("1_fyqef")]
+layout_mode = 0
+offset_left = 228.0
+offset_top = 8.0
+offset_right = 288.0
+offset_bottom = 68.0
+
+[node name="InvSlot5" parent="Control/TextureRect" unique_id=348907495 instance=ExtResource("1_fyqef")]
+layout_mode = 0
+offset_left = 300.0
+offset_top = 8.0
+offset_right = 360.0
+offset_bottom = 68.0
+
+[node name="InvSlot6" parent="Control/TextureRect" unique_id=1739561298 instance=ExtResource("1_fyqef")]
+layout_mode = 0
+offset_left = 448.0
+offset_top = 8.0
+offset_right = 508.0
+offset_bottom = 68.0
+
+[node name="InvSlot7" parent="Control/TextureRect" unique_id=705642975 instance=ExtResource("1_fyqef")]
+layout_mode = 0
+offset_left = 372.0
+offset_top = 8.0
+offset_right = 432.0
+offset_bottom = 68.0
+
+[node name="InvSlot8" parent="Control/TextureRect" unique_id=1428910520 instance=ExtResource("1_fyqef")]
+layout_mode = 0
+offset_left = 592.0
+offset_top = 8.0
+offset_right = 652.0
+offset_bottom = 68.0
+
+[node name="InvSlot9" parent="Control/TextureRect" unique_id=1461635759 instance=ExtResource("1_fyqef")]
+layout_mode = 0
+offset_left = 520.0
+offset_top = 8.0
+offset_right = 580.0
+offset_bottom = 68.0
